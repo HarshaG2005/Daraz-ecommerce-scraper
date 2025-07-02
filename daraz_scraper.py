@@ -12,7 +12,7 @@ driver=webdriver.Chrome()
 current_url = "https://www.daraz.lk/laptops/?page=1&price=50000-&sort=priceasc"
 driver.get(current_url)
 wait=WebDriverWait(driver,10)
-#so i did some research on the webpage and identified that most of the time in item description the currentprice takes more time to load than the title
+#i did some research on the webpage and identified that most of the time in item description the currentprice takes more time to load than the title
 #so i added more waiting time to it
 l_wait=WebDriverWait(driver,15)
 print("Browser started. Giving it a moment to warm up and cache assets...")
@@ -57,7 +57,7 @@ while True:
         break
 
 print(f"Finished collecting links. Found {len(all_page_urls)} total listings.")
-#so this after some research in the site i identifed that most sellers dont added the brand so thought of getting name by their titles
+#after some research in the site i identifed that most sellers dont added the brand so thought of getting name by their titles
 #because in most product titles they included the brand of the item
 BRAND_KEYWORDS = {
     'HP': ['hp', 'pavilion', 'envy', 'spectre', 'elitebook', 'probook', 'omen'],
